@@ -1,0 +1,99 @@
+/*
+    Calc
+*/
+
+
+:root {
+    --butttonColor: #222424;
+    --buttonBackground: #141414;
+    --buttonHoverColor: #191a1a;
+    --buttonActiveColor: #101111;
+    --operatorColor: #e07204;
+    --operatorHoverColor: #df8d3a;
+    --operatorActiveColor: #e2b282;
+    --displayColor: #343636;
+    
+    
+
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    background-image: url('Background.jpg');
+}
+
+#display {
+    width: 100%;
+    text-align: left;
+    font-size: 5rem;
+    color: white;
+    padding: 1.25rem;
+    border: none;
+    background-color: var(--displayColor);
+
+}
+
+#calculator {
+    max-width: 31.25rem;
+    background-color: var(--buttonBackground);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    font-family: sans-serif;
+}  
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 1.5625rem;
+}
+
+button {
+    cursor: pointer;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 3.125rem;
+    border: none;
+    background-color: var(--butttonColor);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+button:hover {
+    background-color: var(--buttonHoverColor);
+}
+
+button:active {
+    background-color: var(--buttonActiveColor);
+}
+
+.operator {
+    background-color: var(--operatorColor);
+}
+
+.operator:hover {
+    background-color: var(--operatorHoverColor);
+}
+
+.operator:active {
+    background-color: var(--operatorActiveColor);
+}
+
+
+@media only screen and (max-width: 480px) {
+    #calculator {
+        max-width: 20rem;
+    }
+    button {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.92rem;
+    }
+    #display {
+        font-size: 3.2rem;
+    }
+    
+}
